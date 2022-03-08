@@ -218,3 +218,9 @@ console.log('#2, 5.--------------');
 // Jeigu viename cikle įvyksta visi nepalankūs įvykiai: iššoka kengūra, 
 // vairuotojas nespėja pasukti vairo ir nespėja paspausti stabdžių while ciklą baikite. 
 // Ciklo pabaigoje atspausdinkite kiek kilometų sugebėjo nuvažiuoti automobilis be avarijos.
+
+const arr = [5, 4, 3, 2, 1];
+arr.forEach((x,y) => {
+    console.log(y)
+});
+console.log(suma);
