@@ -19,6 +19,7 @@ console.log(rabbit);
 const bars = document.querySelector('h2 + h2');
 bars.style.color = '#ff0000';
 
+console.log('2.UZDAVINYS------------------PRADZIA');
 const li = document.querySelectorAll('li'); // grupe li - node list (mazgų sąrašas) pavidalu
 const ul = document.querySelector('ul'); // grupe ul - HTMLCollection (kolekcijos) pavidalu
 
@@ -43,6 +44,7 @@ li.forEach((element, i) => { // Imam node list (mazgų sąrašas), forEach (kiek
     console.log(element.innerText, i); // 
 });
 console.log('SVARBU------------------PABAIGA');
+console.log('1.UZDAVINYS------------------PABAIGA');
 
 // 3 budai kaip iteruoti ul - HTMLCollection zr. https://dev.to/isabelxklee/how-to-loop-through-an-htmlcollection-379k
 console.log(ul.children);
@@ -51,7 +53,7 @@ console.log(ul.children);
 
 // li.style.color = 'brown';
 
-console.log('UZDAVINYS------------------PRADZIA');
+console.log('2.UZDAVINYS------------------PRADZIA');
 const animals = document.querySelectorAll('.animal-list h2'); // .animal-list h2 zr. html. 
 // querySelectorAll - viso selektoriau uzklausa (paieska)
 
@@ -68,4 +70,4 @@ animals.forEach((element, i) => { // Imam sąraša animals, forEach (kiekvienam)
         element.style.color = 'blue'; // like neporiniai skaiciai nusidazo melynai 
     }
 });
-console.log('UZDAVINYS------------------PABAIGA');
+console.log('2.UZDAVINYS------------------PABAIGA');
