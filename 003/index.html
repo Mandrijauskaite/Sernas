@@ -7,17 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="app.js" defer></script>
     <title>003</title>
-    <style>
-        .bd {
+    <style> <!--css-->
+        .bd { /*tevas butono bb*/
             position: relative;
             background-color: blue;
             height: 50px;
         }
         
-        #bb {
+        #bb { /* nes id klase rasome #bb */
             position: absolute;
             background-color: yellow;
             top: 100px;
+        } 
+        body {
+            margin-bottom: 200px;
         }
     </style>
 </head>
@@ -35,9 +38,30 @@
 
     </div>
 
-    <div class="bd">
-        <button id="bb">Mes tave stebim</button>
+    <div class="bd"> <!--buton div -->
+        <button id="bb">Mes tave stebim</button> <!--mygtuko gaminimas; atpazinimas - bb -->
     </div>
+
+    <div id="duok-kodo"></div>
+    <div id="duok-dar-kodo"></div>
+
+    <input type="text" id="i1">Vardas // informacija rasoma i narsykle (pvz. laukelis: galima pildyti Alina, salia parasyti Vardas)
+    <button id="bb1">Enter</button> // tekstas
+
+    <hr>
+
+    <select id="i2">
+        <option value="labas">Labas</option> 
+        <option value="ate">Ate!</option>
+    </select> // selektas
+
+    <hr>
+    
+    <input type="checkbox" value="bebras"> Bebras <br>
+    <input type="checkbox" value="barsukas"> Barsukas <br>
+    <input type="checkbox" value="zuikis"> Zuikis <br>
+
+    <button id="bb2">Enter</button> 
 
 </body>
 

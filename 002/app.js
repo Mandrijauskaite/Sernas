@@ -19,8 +19,8 @@ console.log(rabbit);
 const bars = document.querySelector('h2 + h2');
 bars.style.color = '#ff0000';
 
-console.log('2.UZDAVINYS------------------PRADZIA');
-const li = document.querySelectorAll('li'); // grupe li - node list (mazgų sąrašas) pavidalu
+console.log('1.UZDAVINYS------------------PRADZIA');
+const li = document.querySelectorAll('li'); // grupe li - node list (mazgų sąrašas) pavidalu. querySelectorAll užklausa viso selektoriaus
 const ul = document.querySelector('ul'); // grupe ul - HTMLCollection (kolekcijos) pavidalu
 
 console.log(li);
@@ -39,7 +39,7 @@ console.log(li);
 
 console.log('SVARBU------------------PRADZIA');
 // Mokytis tik sita cikla
-li.forEach((element, i) => { // Imam node list (mazgų sąrašas), forEach (kiekvienam) - jis ima po viena po viena zuiki ir perkelia i (element, i)
+li.forEach((element, i) => { // Imam node list (mazgų sąrašas), forEach (kiekvienam) - jis ima po viena zuiki ir perkelia i (element, i)
     element.style.color = 'red'; // => tada paimame ta elementa ir sakome mes norime tavo stiliaus spalvos
     console.log(element.innerText, i); // 
 });
