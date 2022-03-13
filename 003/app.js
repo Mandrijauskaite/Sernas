@@ -3,10 +3,6 @@ function rand(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-console.log('1.UZDAVINYS------------------PRADZIA');
-console.log('1.UZDAVINYS------------------PABAIGA');
-console.log('SVARBU------------------PRADZIA');
-console.log('SVARBU------------------PABAIGA');
 
 const bb = document.querySelector('#bb'); // dokumento užklausos parinkiklis (mygtuko suradimas); querySelectorAll - užklausa viso selektoriaus
 // console.log(bb); //patikriname ar tikrai turime mygtuka, toliau prideti ivykiu stebetoja - klausytoja
