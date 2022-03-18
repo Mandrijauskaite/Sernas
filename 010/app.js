@@ -156,3 +156,76 @@ const z4 = Zveris.naujasZveris('Vilkas');
 console.log(z4);
 
 console.log(Zveris.miskas);
+
+// Sukurti klasę Karve. Karve objektas turi savybę melzejai: 
+// kuri yra masyvas is 30 random skaičių skaičių nuo 100 iki 999. 
+// Sukurti klasę, iš jos pagaminti objektą ir jį atspausdinti. DONE!
+
+class Karve {
+    
+  //  static melzejai = [];
+
+    constructor() {
+        this.melzejai = [];
+        for (let i = 0; i < 30; i++) {
+        this.melzejai.push(this.rand(100, 999)); // įrašiau 'melzti' this.rand(100, 999)
+    }
+
+    // this.melzejai = this.rand(100, 999); // this ==> objektas 
+    // }
+
+    rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+}
+console.log(new Karve()); //
+
+console.log('2.UZDAVINYS------------------PRADZIA');
+// Sukurti masyvą iš 100 elementų rand 100 -999 
+// ir naudojant map metodą sukurti du masyvus, kurie: 
+// 1 visi lementai didesni už 500 būtų lygus 0; 
+// 2 visi elementai mažesni už 300 būtų masyvai iš 2 elementų, 
+// kuriuose 1 elementas 0 o antras elementas tas skaičius. DONE!
+
+const big = []; // masyvas tuscias
+
+for (let i = 0; i < 100; i++) { //for nes neturime arr
+    big.push = rand(100, 999); // kuri desime i objekta, jis kartosis 7 kartus
+
+    // const kul = big.map(v => {
+    //     if (v > 500) {
+    //         return 0;
+    //     }
+    //     return v;
+    // }
+
+
+    const kul = big.map(v => {
+        if (v > 500) {
+            return 0;
+        }
+        return v;
+    })
+
+
+    const rand(min, max) => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+}
+console.log(big);
+console.log(kul);
+console.log('2.UZDAVINYS------------------PABAIGA');
+
+// kopija, kurioje yra žodžiai 
+// lyginis arba nelyginis DONE!
+const kul = big.map(lyginis => {
+    if (lyginis > nelyginis) {
+        return 0;
+    }
+    return lyginis;
+})
