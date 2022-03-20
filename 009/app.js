@@ -1,116 +1,80 @@
-// Pridėti savybę prie Animal sleep: true/false. 
-// Parašyti du metodus goSleep() ir wakeUp() DONE!
+// BACIK
 
+console.log('1.UZDAVINYS------------------PRADZIA');
+/* 1. etapas. Klase Animal. Kuriant objektą turi būti įrašoma savybė - type. DONE!*/
+/* 2. etapas. Pridėti savybę prie Animal sleep: true/false. Parašyti du metodus goSleep() ir wakeUp() DONE! */
+/* 3. etapas. Pridėti savybe food: 0; Parašyti metoda eat(amount); DONE! */
+/* 4. etapas. Pridedam savybę foodProcessing rand 35 iki 75 (%) Ir pridedent maistą skaičiuoti į food tik tą procentinę dalį DONE! */
+/* 5. etapas. Savybe distance (bėga). Metodas run(distance), prideda atstumą į savybę. DONE!*/
+/* 6. etapas. Viena distancija sunaudoja vieną maistą. Aprašyti tai kode DONE!*/
 
-// Pridėti savybe food: 0; 
-// Parašyti metoda eat(amount); DONE!
+class Animal {  // 1. etapas. Klase Animal. 
 
-// pridedam savybę foodProcessing rand 35 iki 75 (%)
-// Ir pridedent maistą skaičiuoti į food tik tą procentinę dalį DONE!
-
-class Animal {
-
-    constructor(t) {
-        this.type = t;
-        this.sleep = false;
-        this.food = 0;
-        this.foodProcessing = 
+    constructor(t) { // 1. etapas. planas - konstruktorius
+        this.type = t; // 1. etapas. Kuriant objektą turi būti įrašoma savybė - type
+        this.sleep = false; // 2. etapas. Pridėti savybę prie Animal sleep: true/false (tiesa/melas PASIRINKTI).
+        this.food = 0; // 3. etapas. Pridėti savybe food: 0
+        this.foodProcessing = this.rand(35, 75); // 4. etapas. Pridedam savybę foodProcessing rand 35 iki 75 (%) 
+        this.distance = 0; // 5. etapas. Savybe distance.
     }
 
-    goSleep() {
-        this.sleep = true;
+    goSleep() { // 2. etapas. Metodas goSleep()
+        this.sleep = true; // nuvaryti miegoti
     }
 
-    wakeUp() {
-        this.sleep = false;
+    wakeUp() { // 2. etapas. Metodus wakeUp()
+        this.sleep = false; // prižadinti
     }
 
-    eat(amount) {
-        if (!this.sleep) {
-            this.food += amount;
+    eat(amount) { // 3. etapas. Parašyti metoda eat(amount);
+        if (!this.sleep) { // jei nemiega 
+            this.food += amount / 100 * this.foodProcessing; // 3. etapas. Jis valgo. 4. etapas. PRIDEDAM '/100 * this.foodProcessing'
         }
   
     }
-    rand(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
 
-// pridedam savybę foodProcessing rand 35 iki 75 (%)
-// Ir pridedent maistą skaičiuoti į food tik tą procentinę dalį DONE!
-
-// savybe distance. Metodas run(distance), 
-// prideda atstumą į savybę. DONE!
-
-class Animal {
-
-    constructor(t) {
-        this.type = t;
-        this.sleep = false;
-        this.food = 0;
-        this.distance = 0;
-        this.foodProcessing = this.rand(35, 75); // %
-    }
-
-    goSleep() {
-        this.sleep = true;
-    }
-
-    wakeUp() {
-        this.sleep = false;
-    }
-
-    eat(amount) {
+    run(dist) { // 5. etapas. Metodas run(distance), prideda atstumą į savybę.
         if (!this.sleep) {
-            this.food += amount / 100 * this.foodProcessing;
-        }
-    }
-
-    run(dist) {
-        if (!this.sleep) {
-            if (this.food >= dist) {
-                this.food -= dist;
-                this.distance += dist;
+            if (this.food >= dist) { // 6. etapas. Viena distancija sunaudoja vieną maistą. Aprašyti tai kode
+                this.food -= dist;    // 6. etapas. Sumažiname maistą.
+                this.distance += dist; // 5. etapas. Jis bėga. 6. etapas. Padidiname distanciją.
             } else {
-                this.distance += this.food;
-                this.food = 0;
+                this.distance += this.food; // 6. etapas. Nubėgta distancija turimu maistu padidiname Distanciją maistu
+                this.food = 0; // 6. etapas.Maisto nebeliko
             }
         }
     }
 
-    rand(min, max) {
+    rand(min, max) { // 4. etapas.  Pridedame kai sąlygoje atsiranda rand
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
-
 }
 
+const lape = new Animal('Lapė'); // 1. etapas. Jų nėra užduotyje, bet mes turime susikurti gyvūnus 
+const meska = new Animal('Meška'); // 1. etapas. Jų nėra užduotyje, bet mes turime susikurti gyvūnus 
 
-const lape = new Animal('Lapė');
+meska.goSleep(); // 2. etapas.
 
-const meska = new Animal('Meška');
+lape.eat(10); // 3. etapas.
+meska.eat(10); // 3. etapas.
+lape.eat(10); // 3. etapas.
 
-// meska.goSleep();
-
-lape.eat(10);
-lape.eat(10);
-lape.eat(10);
-
-// meska.eat(10);
-
-lape.run(100);
+lape.run(100); // 5. etapas.
 
 // lape.run(2.7487);
 
-// for (const what in meska) {
-//     console.log(what);
-// }
+console.log(lape); // 1. etapas. Išvedame žvėris į konsolę
+console.log(meska); // 1. etapas. Išvedame žvėris į konsolę
+console.log('1.UZDAVINYS------------------PABAIGA');
 
 
-console.log(lape);
-console.log(meska);
+console.log('2.UZDAVINYS------------------PRADZIA');
+/*Sukurti klasę Kibiras1. Konstruktoriuje sukurti savybę akmenuKiekis kuri lygi 0. 
+Parašyti šiai klasei metodus, pridedančius akmenis: prideti1Akmeni() pridetiDaugAkmenu(kiekis) 
+ir metodą išvedantį akmenų kiekį į konsolę- kiekPririnktaAkmenu(). 
+Sukurti vieną kibiro objektą ir pademonstruoti akmenų rinkimą į kibirą ir rezultatų išvedimą. */
 
 
 class Kibiras1 {
@@ -149,3 +113,4 @@ k1.kiekPririnktaAkmenu();
 k1.prideti1Akmeni();
 
 k1.kiekPririnktaAkmenu();
+console.log('2.UZDAVINYS------------------PABAIGA');

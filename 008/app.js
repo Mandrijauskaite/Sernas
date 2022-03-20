@@ -53,7 +53,7 @@ console.log('2.UZDAVINYS------------------PRADZIA');
 // random nuo 1 iki 6
 // žaidėjas meta dar kartą kauliuką
 
-class KauliukoMetimas { // Sukurti objektą Kauliuko metimas
+class KauliukoMetimas { // Sukurti objektą (klase) Kauliuko metimas
 
     constructor(name) {
         this.vardas = name; // turi savybę vardas (pasirinktas)
@@ -91,3 +91,53 @@ console.table(zaidejas1);
 zaidejas1.pakeistiVarda('Petras'); // prašo pakeisti vardą Petras
 console.table(zaidejas1);
 console.log('2.UZDAVINYS------------------PABAIGA');
+
+console.log('NAMŲ DARBAI----------------Objektiniai uždaviniai-------------------------'); 
+
+console.log('1.------------------PRADZIA');
+// Sukurti klasę Kibiras1. Konstruktoriuje sukurti savybę akmenuKiekis  kuri lygi 0.
+// Parašyti šiai klasei metodus, pridedančius akmenis: prideti1Akmeni() pridetiDaugAkmenu(kiekis) 
+// ir metodą išvedantį akmenų kiekį į konsolę- kiekPririnktaAkmenu(). 
+// Sukurti vieną kibiro objektą ir pademonstruoti akmenų rinkimą į kibirą ir rezultatų išvedimą.
+
+class Kibiras1 {
+
+    constructor() {
+        this.akmenuKiekis = 0;
+    }
+
+    rand(min, max) { // function rand(min, max) įkeliame į f-ją todėl ištriname function ir paliekam rand(min, max)
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    pridetiAkmeni() { // metodas
+        this.akmenuKiekis = 0;
+    }
+
+    pridetiDaugiauAkmenu(kiekis) { // metodas
+        this.akmenuKiekis = 
+    }
+}
+const kiekPririnktaAkmenu = new KauliukoMetimas('Jonas'); // vardas (pasirinktas)
+console.table(kiekPririnktaAkmenu);
+
+console.log('2.------------------PRADZIA');
+// Sukurti klasę Pinigine. Konstruktoriuje sukurti dvi savybes popieriniaiPinigai ir metaliniaiPinigai. 
+// Parašyti metodą ideti(kiekis), kuris prideda pinigus į piniginę. 
+// Jeigu kiekis nedidesnis už 2, tai prideda prie metaliniaiPinigai, jeigu kitaip- prie popieriniaiPinigai. 
+// Parašykite metodą skaiciuoti(), kuris suskaičiuotų ir 
+// išvestų į konsolę popieriniaiPinigai ir metaliniaiPinigai sumą. 
+// Sukurti klasės objektą ir pademonstruoti veikimą. 
+// Nesvarbu kokios popierinės kupiūros ir metalinės monetos egzistuoja realiame pasaulyje.
+
+class Pinigine {
+
+}
+
+
+console.log('3.------------------PRADZIA');
+// Sukurti klasę Troleibusas. Konstruktoriuje sukurti savybę keleiviuSkaicius kuri yra lygi 0. 
+// Parašyti du metodus: ilipa(keleiviuSkaicius) ir islipa(keleiviuSkaicius). 
+// O taip pat parašyti metoda vaziuoja(), kuris į konsolę išvestų troleibusu važiuojančių keleivių skaičių. 
+// Atkreipkite dėmesį, kad troleibusu važiuoti neigiamas keleivių skaičius negali.
