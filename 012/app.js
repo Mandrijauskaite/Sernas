@@ -1,11 +1,16 @@
+// MAP
+// masyvas, masyvas yra objektas
+
+console.log('1.PAVYZDYS---------Array---------PRADZIA');
 // const arr = []; // sutrumpinimas
-const arr = new Array();
+const arr = new Array(); // ilgasisi variantas
 
 arr[0] = 'Dramblys';
 arr[1] = 'Šluota';
 arr[2] = 'Tankas';
 
-console.log(arr, arr[2]);
+console.log(arr, arr[2]); 
+console.log('1.PAVYZDYS---------Array---------PABAIGA');
 
 const obj = {};
 
@@ -19,9 +24,9 @@ console.log(obj);
 //     console.log(element);
 // });
 
+console.log('1.PAVYZDYS--------map---------PRADZIA');
 
-const map = new Map(); //() {} []
-
+const map = new Map(); // () {} []
 let a;
 
 const f = () => console.log('Hi!');
@@ -33,18 +38,21 @@ map.set(f, 'Tankas');
 map.set('u', a);
 
 
-
 map.delete('war');
 
-console.log(map, map.size);
+console.log(map, map.size); // map.size tas ptats kaip map.length
 
 // map.forEach((element, i) => {
 //     console.log(i, '=>', element);
-// });
+// }); 
+console.log('1.PAVYZDYS--------map---------PABAIGA');
 
 
 console.log(new Map(JSON.parse(JSON.stringify([...map]))));
 
+console.log('2.PAVYZDYS--------map---------PABAIGA');
+// sukurti klase pirkiniu krepselis
+// 
 
 class PirkiniuKrepselis {
 
@@ -61,13 +69,13 @@ class PirkiniuKrepselis {
     idetiDuonos(kiekis) {
         this.ideti(kiekis, 'duonele');
     }
-    ideti(kiekis, produktas) {
+    ideti(kiekis, produktas) { // produktas yra raktas
         let suma;
         if (this.turinys.has(produktas)) {
             suma = this.turinys.get(produktas) + kiekis;
             this.turinys.set(produktas, suma);
         } else {
-            this.turinys.set(produktas, kiekis);
+            this.turinys.set(produktas, kiekis); //
         }
     }
     krepselioTurinys() {
