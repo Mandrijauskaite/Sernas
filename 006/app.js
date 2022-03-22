@@ -1,8 +1,3 @@
-console.log('1.PAVYZDYS------------------PRADZIA');
-console.log('1.PAVYZDYS------------------PABAIGA');
-console.log('SVARBU------------------PRADZIA');
-console.log('SVARBU------------------PABAIGA');
-
 // JavaScript skirtas html stumdymui
 // FrontEnd yra ta dalis kuri matosi narsykleje
 // BackEnd yra ta dalis kuri nesimato narsykleje
