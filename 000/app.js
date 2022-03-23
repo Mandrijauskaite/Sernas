@@ -1,3 +1,8 @@
+/* vaikščiojimas terminalu:
+1. cd react - iš C:\Users\As\Documents\_33-grupe_\Sernas> cd react (pereiti į folderį kuriame norime dirbti šiuo atveju react)
+2. cd.. - grįžimas į prieš tai buvusį folderį
+3. ls - C:\Users\As\Documents\_33-grupe_\Sernas> ls - išskleidžia visus folderius
+*/
 function rand(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);

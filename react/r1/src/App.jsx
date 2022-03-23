@@ -1,15 +1,14 @@
 import './App.css';
-import Bebras from './Components/Bebras';
-import Vovere from './Components/Vovere';
+import Miskas from './Components/Miskas';
+import Upe from './Components/Upe';
 
 function App() {
   return (
     <div className="App">
-      <h1>Bla</h1>
-      <Bebras></Bebras>
-      <Bebras></Bebras>
-      <Bebras></Bebras>
-      <Vovere></Vovere>
+        <h1>PROPS</h1>
+        <Miskas forest="blue" big={true}></Miskas>
+        <Miskas forest="red" big={false}></Miskas>
+        <Upe forest="pink" big={false}></Upe>
     </div>
   );
 }
