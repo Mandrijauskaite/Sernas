@@ -1,8 +1,8 @@
 import Zveris from "./Zveris";
 
-function Miskas({big, forest, msg}) {
+function Miskas({big, forest, msg}) { // miskas paima msg ir perduoda lapei
 
-    const getBig = big => big ? '40px' : '20px';
+    const getBig = big => big ? '60px' : '40px';
         
     return (
         <div>
@@ -11,9 +11,9 @@ function Miskas({big, forest, msg}) {
                 fontSize: getBig(big)
                 }}>Miškas</h3>
 
-                <Zveris type="Lapė Zita" msg={msg}></Zveris>
-                <Zveris type="Kiškis Antanas"></Zveris>
-                <Zveris type="Bebras Vytas"></Zveris>
+            <Zveris type="Lapė Zita" msg={msg}></Zveris>
+            <Zveris type="Kiškis Antanas"></Zveris>
+            <Zveris type="Bebras Vytas"></Zveris>
         </div>
     )
 }

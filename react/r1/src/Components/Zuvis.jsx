@@ -1,7 +1,7 @@
-// function Zuvis({type}) {
-//     return (
-//         <h2>{type}</h2>
-//     )
-// }
+function Zuvis({color, type}) {
+    return (
+        <h6 style{{color:color}}>{type}</h6>
+    )
+}
 
-// export default Zuvis;
+export default Zuvis; 

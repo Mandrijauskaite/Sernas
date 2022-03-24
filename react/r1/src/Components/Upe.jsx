@@ -1,21 +1,14 @@
-// import Zvuvis from "./Zuvis";
+import Zuvis from "./Zuvis";
 
-// function Upe({big, forest}) {
+function Upe({color}) {
 
-//     const getBig = big => big ? '20px' : '10px';
-    
-//     return (
-//         <div>
-//             <h3 style={{
-//                 color:forest,
-//                 fontSize: getBig(big)
-//                 }}>Miškas</h3>
+    return (
+        <>
+                <Zuvis color={color} type="Banginis"></Zuvis>
+                <Zuvis color={color} type="Silke"></Zuvis>
+                <Zuvis color={color} type="Karosas"></Zuvis>
+        </>
+    )
+}
 
-//                 <Upe type="Menkė"></Upe>
-//                 <Upe type="Lydeka"></Upe>
-//                 <Upe type="Karšis"></Upe>
-//         </div>
-//     )
-// }
-
-// export default Upe;
+export default Upe;

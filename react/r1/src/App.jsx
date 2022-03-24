@@ -1,12 +1,11 @@
 import './App.css';
-import Miskas from './Components/Miskas';
+import Garazas from './Components/Garazas';
 
 function App() {
   return (
     <div className="App">
-        <h1>PROPS</h1>
-        <Miskas forest="blue" big={true} msg="Alio"></Miskas>
-        <Miskas forest="red" big={false} msg="Super"></Miskas>
+      <h1>LIST</h1>
+      <Garazas autos={['Opel', 'Vilvo', ]}></Garazas>
     </div>
   );
 }
