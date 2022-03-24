@@ -3,6 +3,12 @@
 2. cd.. - grįžimas į prieš tai buvusį folderį
 3. ls - C:\Users\As\Documents\_33-grupe_\Sernas> ls - išskleidžia visus folderius
 */
+
+// 1. Komponente Garazas yra trys automobiliai Opel Volvo ir Man automobiliai yra komponentas Auto DONE!
+// 2. Patobulint Garazas ir Auto, kad būtų galima atvaizduot autoList color turi nuspalvinti type DONE!
+// const autoList = [    {type: 'Volvo', color: 'blue', price: '78000'},    {type: 'MB', color: 'green', price: '20000'},    {type: 'Audi', color: 'black', price: '93000'},    {type: 'Kamaz', color: 'orange', price: '178000'}]
+// Kadangi MB surudijo, tai jo neatvaizduot DONE!
+
 function rand(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);

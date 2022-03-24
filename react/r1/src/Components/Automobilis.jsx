@@ -1,4 +1,4 @@
-export default function Automobilis({type}) {
+function Automobilis({type}) {
     return (
         <h6>{type}</h6>
     )

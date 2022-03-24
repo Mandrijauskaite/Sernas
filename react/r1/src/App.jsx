@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>LIST</h1>
-      <Garazas autos={['Opel', 'Vilvo', ]}></Garazas>
+      <Garazas></Garazas>
     </div>
   );
 }
