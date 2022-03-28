@@ -1,11 +1,18 @@
+// const gelytes = [
+//     {name: 'Tulpė', color: 'red'},
+//     {name: 'Gvazdikas', color: 'yellow'},
+//     {name: 'Raktelis', color: 'blue'},
+//     {name: 'Bijūnas', color: 'red'},
+//     {name: 'Alyva', color: 'orange'},
+// ]
 import './App.css';
-import Garazas from './Components/Garazas';
+import Circle from "./Components/Circle";
 
 function App() {
   return (
     <div className="App">
-      <h1>LIST</h1>
-      <Garazas></Garazas>
+        <h1>CLASS</h1>
+        <Circle size="200px"></Circle>
     </div>
   );
 }
