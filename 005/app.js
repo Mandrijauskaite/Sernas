@@ -128,18 +128,8 @@ console.log('--------for kodo forma----------');
 // console.log(vetClinic);
 console.log('--------for kodo forma----------');
 
-const vetClinic = [];
-for (let i = 0; i < 20; i++) {
-    // gamina katino objekta
-    const cat = {}; // cia sukuriama 20 katinu
-    cat.name = cats[rand(0, cats.length - 1)]; 
-    cat.pills = {};
-    cat.pills.blue = !rand(0, 1);
-    cat.pills.red = !rand(0, 1);
-    //
-    vetClinic.push(cat);
-}
-console.log(vetClinic);
+
+
 console.log('6.PAVYZDYS------------------PABAIGA');
 
 
