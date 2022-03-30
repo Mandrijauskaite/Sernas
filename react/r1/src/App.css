@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -50,4 +54,9 @@
 .beb {
   background-color: black;
   color: white;
+}
+
+.laukas {
+    background-color: green;
+    color: white;
 }
