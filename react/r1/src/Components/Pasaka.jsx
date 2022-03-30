@@ -1,3 +1,4 @@
+// Padaryti komponentą su mygtuku, kurį paspaudus atsirastų mėlynas kvadratas, dar paspaudus dar atsirastų ir t.t. DONE!
 import {useState} from 'react';
 
 function Pasaka() {
@@ -5,18 +6,26 @@ function Pasaka() {
     const [title, setTitle] = useState('non');
     const [color, setColor] = useState('pink');
 
+    // const bla = 5;BLOGIS
 
     const goBebrai = () => {
         setTitle('Apie Bebrus');
     }
 
     const goTrysBroliai = () => {
-        setTitle('3 Broliai');
+        setTitle('3 Broliai'); // įrašymas
     }
 
     const goColor = c => {
         setColor(c);
     }
+
+    const changeColor = () => {
+        // const newColor = color == 'blue' ? 'pink' : 'blue';
+        // setColor(newColor);
+        setColor(oldColor => oldColor == 'blue' ? 'pink' : 'blue');
+    }
+
 
 
     return (
@@ -26,6 +35,7 @@ function Pasaka() {
             <button onClick={goTrysBroliai}>3 Broliai</button>
             <button onClick={() => goColor('pink')}>Pink</button>
             <button onClick={() => goColor('blue')}>Blue</button>
+            <button onClick={changeColor}>Change</button>
         </div>
     );
     
