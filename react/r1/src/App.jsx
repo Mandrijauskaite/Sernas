@@ -1,12 +1,12 @@
 import './App.css';
-import Form from './Components/Form';
+import KVraudonas from './Components/KVraudonas';
 
 function App() {
 
   return (
     <div className="App">
         <h1>Forms</h1>
-        <Form></Form>
+        <KVraudonas></KVraudonas>
     </div>
   );
 }

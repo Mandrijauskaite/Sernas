@@ -1,3 +1,4 @@
+// PADARYTI komponentą su mygtuku, kurį paspaudus atsirastų mėlynas kvadratas, dar paspaudus, dar atsirastų ir t.t.
 import { useState } from "react"
 
 function MelynasisKvadratelis() {
@@ -6,7 +7,7 @@ function MelynasisKvadratelis() {
 
     const add = () => {
         setKv(items => [...items, items.length + 1]);
-    }
+    } //
 
     return (
         <>
