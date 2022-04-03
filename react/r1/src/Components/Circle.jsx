@@ -28,7 +28,7 @@ class Circle extends Component {
             <div style={{
                 width: this.props.size,
                 height: this.props.size,
-                borderRadius: '50%',
+                borderRadius: '50%', 
                 background: this.state.color
             }}>
             </div>

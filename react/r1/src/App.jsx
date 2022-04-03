@@ -7,6 +7,8 @@ function App() {
     <div className="App">
         <h1>---------1. uždavinys--------</h1>
         <KVraudonas></KVraudonas>
+
+        
     </div>
   );
 }

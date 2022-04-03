@@ -1,15 +1,36 @@
 import {useState} from 'react';
+import rand from '../Common/rand';
 
 function KVraudonas() {
 
-    const [text1, setText1] = useState(''); {/* 1 forma – 1 STATE, Tuščias stringas */}
+    const [number, setNumber] = useState(''); {/* 1 forma – 1 STATE, Tuščias stringas */}
+    const [raudonas, setRaudonas] = useState([]); {/* 1 forma – 1 STATE, Tuščias masyvas */}
+
+    const changeNumber = e => { {/* ši f-ja atlieka tik pasinaudodama setNumber pakeičia 'non' į 'Apie Bebrus' */}
+    setNumber(e.target.value);
+    console.log(e.target.value);  
+    }
+
+    const goRaudonas = e => { {/* ši f-ja atlieka tik pasinaudodama setTitle pakeičia 'non' į 'Irasei ? OK' */}
+    const kvadratelis = [];
+    for (let i = 0; i < number; i++) {
+        kvadratelis.push(rand(100, 200));
+    }
+    setRaudonas((raudonas) => [...raudonas, ...kvadratelis]);
+    console.log(e.target.value);  
+    }
 
     return ( // return - grąžinti
         <>
-        <input type="text"></input> {/* susidaro laukelis */}
-        <button>Click</button>
+        <input type="number" onChange={changeNumber} placeholder="Įrašyti norimą skaičių"></input> {/* susidaro laukelis,  */}
+        <button onClick={goRaudonas}>ADD</button> {/* mygtuko kūrimas; onClick-paleisti metodą goRaudonas */}
+        <div>
+        {
+            raudonas.map((k, i) => <div className="RS" key={i}>{k}</div>)
+        }
+        </div>
         </>
     )
 
 }
-export default KVraudonas
+export default KVraudonas;

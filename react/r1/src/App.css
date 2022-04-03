@@ -74,3 +74,13 @@
   align-items: center;
   margin: 10px;
 }
+
+.RS {
+  width: 50px;
+  height: 50px;
+  background: #f50505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
