@@ -2,6 +2,7 @@ import './App.css';
 import Katinukas from './Components/Katinukas';
 import KVraudonas from './Components/KVraudonas';
 import Laukeliai from './Components/Laukeliai';
+import Range from './Components/Range';
 import Select from './Components/Select';
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
         <Laukeliai></Laukeliai>
         <h2>---------4. uždavinys--------</h2>
         <Select></Select>
+        <h2>---------5. uždavinys--------</h2>
+        <Range></Range>
     </div>
   );
 }
