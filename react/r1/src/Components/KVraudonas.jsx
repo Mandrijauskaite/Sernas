@@ -6,18 +6,16 @@ function KVraudonas() {
     const [number, setNumber] = useState(''); {/* 1 forma – 1 STATE, Tuščias stringas */}
     const [raudonas, setRaudonas] = useState([]); {/* 1 forma – 1 STATE, Tuščias masyvas */}
 
-    const changeNumber = e => { {/* ši f-ja atlieka tik pasinaudodama setNumber pakeičia 'non' į 'Apie Bebrus' */}
+    const changeNumber = e => { {/* ši f-ja atlieka tik pasinaudodama setNumber pakeičia 'non' į 'Įrašyti norimą skaičių' */}
     setNumber(e.target.value);
-    console.log(e.target.value);  
     }
 
-    const goRaudonas = e => { {/* ši f-ja atlieka tik pasinaudodama setTitle pakeičia 'non' į 'Irasei ? OK' */}
+    const goRaudonas = e => { 
     const kvadratelis = [];
     for (let i = 0; i < number; i++) {
         kvadratelis.push(rand(100, 200));
     }
     setRaudonas((raudonas) => [...raudonas, ...kvadratelis]);
-    console.log(e.target.value);  
     }
 
     return ( // return - grąžinti
