@@ -1,5 +1,3 @@
-
-
 function SkaiciusMygtukas({add, addKv}) {
 
     return (

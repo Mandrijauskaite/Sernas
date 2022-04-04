@@ -1,3 +1,4 @@
+import Bs from "./Bs";
 
 function SkaiciusH2({sk, kv}) {
 
@@ -5,7 +6,7 @@ function SkaiciusH2({sk, kv}) {
         <>
         <h2>{sk}</h2>
         {
-            kv.map((k, i) => <div className="BS" key={i}>{i + 1}</div>)
+            kv.map((k, i) => <Bs key={i} sk={i}></Bs>)
         }
         </>
     )
