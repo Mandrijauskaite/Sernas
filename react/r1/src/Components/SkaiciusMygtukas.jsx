@@ -8,4 +8,4 @@ function SkaiciusMygtukas({add, addKv}) {
     )
 }
 
-export default SkaiciusMygtukas;
+export default SkaiciusMygtukas; 

@@ -16,7 +16,7 @@ function Bs({sk, rand}) {
 
     return (
         <>
-        <div className="BS" >{sk + 1}</div>
+        <div className="BS" >{sk + 1}</div> 
         </>
     )
 }

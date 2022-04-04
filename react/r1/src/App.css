@@ -84,3 +84,9 @@
   align-items: center;
   margin: 10px;
 }
+
+.horizontal-holder {
+  display: flex;
+  flex-direction: new;
+  flex-wrap: wrap;
+}

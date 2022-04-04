@@ -17,18 +17,20 @@ function KVraudonas() {
     }
     setRaudonas((raudonas) => [...raudonas, ...kvadratelis]);
     }
+    console.log();
 
     return ( // return - grąžinti
         <>
         <input type="number" onChange={changeNumber} placeholder="Įrašyti norimą skaičių"></input> {/* susidaro laukelis,  */}
         <button onClick={goRaudonas}>ADD</button> {/* mygtuko kūrimas; onClick-paleisti metodą goRaudonas */}
-        <div>
+        <div className="horizontal-holder">
         {
             raudonas.map((k, i) => <div className="RS" key={i}>{k}</div>)
         }
-        </div> 
+        </div>
         </>
     )
 
 }
+
 export default KVraudonas;
