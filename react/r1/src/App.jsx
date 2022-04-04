@@ -1,24 +1,23 @@
 import './App.css';
-import Katinukas from './Components/Katinukas';
-import KVraudonas from './Components/KVraudonas';
-import Laukeliai from './Components/Laukeliai';
-import Range from './Components/Range';
-import Select from './Components/Select';
+import SkaiciusMygtukas from './Components/SkaiciusMygtukas';
+import { useState } from "react"
+import SkaiciusH2 from './Components/SkaiciusH2';
 
 function App() {
 
+    const [sk, setSk] = useState(0);
+
+    const add = () => {
+        setSk(s => ++s);
+    }
+
   return (
     <div className="App">
-        <h2>---------1. uždavinys--------</h2>
-        <KVraudonas></KVraudonas>
-        <h2>---------2. uždavinys--------</h2>
-        <Katinukas></Katinukas>
-        <h2>---------3. uždavinys--------</h2>
-        <Laukeliai></Laukeliai>
-        <h2>---------4. uždavinys--------</h2>
-        <Select></Select>
-        <h2>---------5. uždavinys--------</h2>
-        <Range></Range>
+      <h1>STaTE UPLiFTINg</h1>
+
+        <SkaiciusMygtukas add={add}></SkaiciusMygtukas>
+        <SkaiciusH2 sk={sk}></SkaiciusH2>
+
     </div>
   );
 }
