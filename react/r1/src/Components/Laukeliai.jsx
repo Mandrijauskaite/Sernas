@@ -8,6 +8,7 @@ function Laukeliai() {
 
     const changeSkaicius1 = e => {  {/* e-eventas (įvestis) e-turi target */}
         setSkaicius1(e.target.value); {/* e-turi target, target-value */}
+        setSkaicius2(e.target.value / 2);
     }
 
     const changeSkaicius2 = e => {
@@ -19,8 +20,8 @@ function Laukeliai() {
         <>
         <input type="text" placeholder="1 skaičius" onChange={changeSkaicius1} value={skaicius1}/> {/* susidaro laukelis.placeholder-įrašo tekstą laukelyje; */}
         <input type="text" placeholder="2 skaičius" onChange={changeSkaicius2} value={skaicius2}/> {/*  */}
-        <button>ADD</button>  {/*  onClick={?????} ideti */}
-        </>
+        <button>ADD</button>  {/*   */}
+        </> 
     )
   
 }

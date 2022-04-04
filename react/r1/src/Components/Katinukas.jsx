@@ -35,7 +35,7 @@ function Katinukas() {
             info.map((sarasas, i) => <h2 key={i} > {i +1} {""} {sarasas.vardas} {""} {sarasas.svoris} {"-"}kg </h2>)
         }
         </div>
-        </>
+        </> 
     )
 
 }

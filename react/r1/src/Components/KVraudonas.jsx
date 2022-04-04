@@ -26,7 +26,7 @@ function KVraudonas() {
         {
             raudonas.map((k, i) => <div className="RS" key={i}>{k}</div>)
         }
-        </div>
+        </div> 
         </>
     )
 

@@ -3,32 +3,34 @@ import { useState } from "react"
 function Select() {
 
     const [tekstas, setTekstas] = useState('');
-    const [color, setColor] = useState('Black');
-    const [size, setSize] = useState('12px');
-    const [font, setFont] = useState('Arial');
+    const [spalva, setSpalva] = useState('Blue');
+    const [dydis, setDydis] = useState('45px');
+    const [stilius, setStilius] = useState('Bold');
 
 
     const changeTekstas = e => { {/*  */}
         setTekstas(e.target.value);
     }
 
-    const changeColor = (c) => { {/* c-argumentas */}
-        setColor(c);
+    const changeSpalva = (c) => { {/* c-argumentas */}
+        // console.log(c); {/* patikrinti ar veikia pirmas pasirinkimas po pirmo paspaudimo */}
+        setSpalva(c);
     }
 
-    const changeSize = (s) => { {/*  */}
-        setSize(s);
+    const changeDydis = (s) => { {/*  */}
+        setDydis(s);
     }
 
-    const changeFont = (f) => { {/*  */}
-    setFont(f);
-}
+    const changeStilius = (f) => { {/*  */}
+        setStilius(f);
+    }
 
     return (
         <>
             <form>  {/*https://reactjs.org/docs/forms.html The select Tag. Sukelia visu selectus į vieną bloką*/}
-                <label>{' '}
-                    <select value={color} onChange={(e) => changeColor(e.target.value)}>
+                <label>
+                    <select value={spalva} onChange={(e) => changeSpalva(e.target.value)}>
+                        <option selected>--</option>
                         <option value="black">Black</option>
                         <option value="yellow">Yellow</option>
                         <option value="red">Red</option>
@@ -36,17 +38,19 @@ function Select() {
                         <option value="lime">Lime</option>          
                     </select>
                 </label>
-                <label>{''}
-                    <select value={size} onChange={(e) => changeSize(e.target.value)}>
-                        <option value="12px">12px</option>
+                <label>
+                    <select value={dydis} onChange={(e) => changeDydis(e.target.value)}>
+                        <option selected>--</option>
+                        <option value="35px">35px</option>
                         <option value="26px">26pxt</option>
                         <option value="30px">30px</option>
-                        <option value="14px">14px</option>
+                        <option value="16px">16px</option>
                         <option value="40px">40px</option>          
                     </select>
                 </label>
-                <label>{' '}
-                    <select value={font} onChange={(e) => changeFont(e.target.value)}>
+                <label>
+                    <select value={stilius} onChange={(e) => changeStilius(e.target.value)}>
+                        <option selected>--</option>
                         <option value="arial">Arial</option>
                         <option value="impact">Impact</option>
                         <option value="comicsansms">Comic Sans MS</option>
@@ -55,7 +59,7 @@ function Select() {
                     </select>
                 </label>
             <input type="tekstas" onChange={changeTekstas}></input> {/* mygtukas*/}
-            <h1 style={{ color: color, size: size, font: font }}>{tekstas}</h1> {/* kad galetume matyti ta pati zodi kuris yra laukelyje- matysime zodi ne laukelyje */}
+            <h1 style={{ color: spalva, fontSize: dydis, fontFamily: stilius }}>{tekstas}</h1> {/* kad galetume matyti ta pati zodi kuris yra laukelyje- matysime zodi ne laukelyje */}
             </form>
         </>
     )
