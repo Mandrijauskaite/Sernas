@@ -4,7 +4,7 @@ import { useState } from "react"
 import SkaiciusH2 from './Components/SkaiciusH2';
 
 
-function App() {
+function App() { {/* */}
 
     const [sk, setSk] = useState(0);
     const [kv, setKv] = useState([]);
