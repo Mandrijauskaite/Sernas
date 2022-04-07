@@ -19,7 +19,7 @@ function Create({create}) {
     }
 
     const handleInput = (e, d) => {
-        switch(d) {
+        switch(d) { 
             case 'type':
                 setType(e.target.value);
                 break;
