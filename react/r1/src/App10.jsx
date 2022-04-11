@@ -87,37 +87,39 @@ function App() {
 
     return (
         <div className="app">
-             <h2>Zoologijos sodas</h2>
-             <h4>Gyvūnų lentelė</h4>
-            <div className="table-wrapper">
-                <table className="fl-table">
-                    <thead>
-                        <tr>
-                            <th>Pavadinimas</th>
-                            <th>Spalva</th>
-                            <th>Turima</th>
-                            <th>Spausti</th>
-                            <th>Spausti</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Content 1</td>
-                            <td>Content 1</td>
-                            <td>Content 1</td>
-                            <td>Content 1</td>
-                            <td>Content 1</td>
-                        </tr>
-                        <tr>
-                            <td>Content 2</td>
-                            <td>Content 2</td>
-                            <td>Content 2</td>
-                            <td>Content 2</td>
-                            <td>Content 2</td>
-                        </tr>
+            <div className="top1">
+                <h2>Zoologijos sodas</h2>
+                <h4>Gyvūnų lentelė</h4>
+                <div className="table-wrapper">
+                    <table className="fl-table">
+                        <thead>
+                            <tr>
+                                <th>Pavadinimas</th>
+                                <th>Spalva</th>
+                                <th>Turima</th>
+                                <th>Spausti</th>
+                                <th>Spausti</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                            </tr>
+                            <tr>
+                                <td>Content 2</td>
+                                <td>Content 2</td>
+                                <td>Content 2</td>
+                                <td>Content 2</td>
+                                <td>Content 2</td>
+                            </tr>
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div className="top">
                 <h1>ZoO</h1>

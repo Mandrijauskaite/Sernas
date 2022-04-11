@@ -14,11 +14,11 @@ function Animal({animal, deleteA, show}) {
             }
             </div>
             <div className="buttons">
-                <button className="edit" onClick={()=>show(animal.id)}>edit</button>
+                <button className="edit" onClick={() => show(animal.id)}>edit</button>
                 <button className="delete" onClick={() => handleDelete(animal.id)}>delete</button>
             </div>
         </li>
     )
-}
+} 
 
 export default Animal;
