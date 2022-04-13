@@ -3,8 +3,8 @@ import getNewId from './Common/id';
 import Create from './Components/crud/Create';
 import Edit from './Components/crud/Edit';
 import Read from './Components/crud/Read';
-
 import './crud.scss';
+
 
 function App() {
 
