@@ -12,7 +12,7 @@ function PostTitle({post}) {
     return (
         <li>
             {post.title}
-        </li>
+        </li> 
     )
 
 

@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import axios from 'axios';
 import PostTitle from './PostTitle';
 
+
 function Posts() {
 
     const [posts, setPosts] = useState([]);
@@ -14,7 +15,7 @@ function Posts() {
             setPosts(res.data.sort((a,b) => b.title.length - a.title.length));
         })
 
-    }, []);
+    }, []); 
 
     return (
         <ul>
