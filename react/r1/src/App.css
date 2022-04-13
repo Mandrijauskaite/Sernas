@@ -90,3 +90,32 @@
   flex-direction: new;
   flex-wrap: wrap;
 }
+
+.S {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  width: 500px;
+}
+
+.buttons button {
+  min-width: 50px;
+}
+
+.kvc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  width: 500px;
+}

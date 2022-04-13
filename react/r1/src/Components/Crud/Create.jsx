@@ -10,7 +10,7 @@ function Create({create}) {
         const data = {
             type: type,
             color: color,
-            isalive: isalive
+            isalive: isalive 
         }
         create(data);
         setType('');
