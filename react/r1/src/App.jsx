@@ -1,16 +1,31 @@
+import { useState } from 'react';
 import './App.css';
-import Posts from './Components/Posts';
-import Users from './Components/Users';
-
+import Senelis from './Components/Senelis';
+import SenelioZinios from './Contexts/SenelioZinios';
+import SenelioZinios2 from './Contexts/SenelioZinios2';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Bla 2</h1>
-        <Users></Users>
-        <Posts></Posts>
-    </div>
-  );
+    const [count, setCount] = useState(0);
+    const [count2, setCount2] = useState(0);
+    return (
+        <div className="App">
+            <h1>COnteXt ------- {count} {count2}</h1>
+
+            <button onClick={() => {
+                setCount(c => c + 1);
+                setCount2(c => c + 2);
+                }}>GO</button>
+
+            <SenelioZinios.Provider value={count}>
+            <SenelioZinios2.Provider value={count2}>
+
+                <Senelis></Senelis>
+
+            </SenelioZinios2.Provider>
+            </SenelioZinios.Provider>
+
+        </div>
+    );
 }
 
 export default App;
