@@ -1,31 +1,46 @@
-import { useState } from 'react';
 import './App.css';
-import Senelis from './Components/Senelis';
-import SenelioZinios from './Contexts/SenelioZinios';
-import SenelioZinios2 from './Contexts/SenelioZinios2';
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+
+import Office1 from './Routes/Office1';
+import Alabama from './Routes/Alabama';
+import Edit from './Routes/Edit';
+
+export const data = [
+    {n: 'barsukas', id: 5},
+    {n: 'bebras', id: 9},
+    {n: 'krokodilas', id: 15},
+    {n: 'vilkas', id: 775},
+    {n: 'zuikis', id: 29}
+];
 
 function App() {
-    const [count, setCount] = useState(0);
-    const [count2, setCount2] = useState(0);
-    return (
-        <div className="App">
-            <h1>COnteXt ------- {count} {count2}</h1>
+  return (
 
-            <button onClick={() => {
-                setCount(c => c + 1);
-                setCount2(c => c + 2);
-                }}>GO</button>
+    <BrowserRouter>
+    <div className="App">
+      <h1>ROUTER</h1>
+        <Link to="/back-office" className="super">Back Office</Link>
+        <Link to="/sweet-home" className="super">Alabama</Link>
+        <div>-----------------------------------------------</div>
+        {
+            data.map(a =><Link key={a.id} to={'/edit/' + a.id + '/' + a.n}>{a.n}</Link>)
+        }
 
-            <SenelioZinios.Provider value={count}>
-            <SenelioZinios2.Provider value={count2}>
 
-                <Senelis></Senelis>
 
-            </SenelioZinios2.Provider>
-            </SenelioZinios.Provider>
+        <Routes>
+            <Route path="/" element={<div>Hello!</div>}></Route>
+            <Route path="/back-office" element={<Office1></Office1>}></Route>
+            <Route path="/sweet-home" element={<Alabama></Alabama>}></Route>
+            <Route path="/edit/:id/:name" element={<Edit></Edit>}></Route>
+            <Route path="*" element={<div>404 not found</div>}></Route>
+        </Routes>
+        
+    </div>
+    
+    </BrowserRouter>
 
-        </div>
-    );
+  );
 }
 
 export default App;
