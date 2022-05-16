@@ -1,15 +1,14 @@
 import './App.css';
+import ApiFetch from './Components/ApiFetch';
 
-const x = '';
 
 function App() {
 
-    
   return (
     <div className="App">
-        <p></p>
+      <ApiFetch />
     </div>
   );
 }
 
-export default App;
+export default App
