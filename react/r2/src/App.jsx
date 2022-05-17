@@ -1,28 +1,44 @@
+
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import './bootstrap.css';
 import './App.css';
+import Create from './Components/Create';
 
 
 function App() {
 
-  const [trees, setTrees] = useState([]);  // steitas, pradžioje medžių neturime
+  const [trees, setTrees] = useState([]);
 
-  useEffect(() => { // kreipiamės į savo serverį ir iš jo gausime visus medžius
-    axios.get('http://localhost:3003/trees-manager') // prašome gauti (getinti) iš adreso http://localhost:3003/trees-manager
-      .then(res => { // tada, kada gažką gauname 
-        console.log(res.data); // pasižiūrime ką turime; palaukiame kol gausime responsą ir..
-        setTrees(res.data); // .. ir responso duomenis išsispausdiname (jei šios eilutės nėra sąrašo ant ekrano nematysime)
+  useEffect(() => {
+    axios.get('http://localhost:3003/trees-manager')
+      .then(res => {
+        console.log(res.data);
+        setTrees(res.data);
       })
-  })
+  }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>LABAS</h1>
-        {
-          trees.map(t => <div key={t.id}>{t.name}</div>) // steitą išsimapiname. Imame medį t ir iš medžio padarome divą. Kad react nepyktų pasidarome key (jis yra medžių Eglė ir pan. id) ir įsirašome patį medį t. ir jo vardą (name žr. 0: {id: 1, name: "Eglė", height: 4, type: 2})
-        }
-      </header>
+    <div className="container">
+      <div className="row">
+        <div className="col-4">
+          <Create></Create>
+        </div>
+        <div className="col-8">
+          <div className="card m-2">
+            <div className="card-header">
+              <h2>Tree List</h2>
+            </div>
+            <div className="card-body">
+              <ul className="list-group">
+                {
+                  trees.filter(t => t.name !== 'Agrastas').map(t => <li className="list-group-item" key={t.id}>{t.name}</li>)
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
