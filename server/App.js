@@ -47,7 +47,7 @@ app.post('/trees-manager', (req, res) => {
     // INSERT INTO table_name (column1, column2, column3, ...)
     // VALUES (value1, value2, value3, ...);
     const sql = `
-        INSERT INTO medziai
+        INSERT INTO trees
         (name, height, type)
         VALUES (?, ?, ?)
     `;
